@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 const SingleTodo = ({ onDelete, Title }) => {
+  useEffect(() => {
+    console.dir(Title + " has been added");
+    return () => alert(Title + " has been deleted");
+  }, []);
   return (
     <div
       style={{
